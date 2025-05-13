@@ -17,6 +17,7 @@ def analyze_headers(data: HeaderInput):
         "SPF": headers.get("Received-SPF", ""),
         "DKIM": headers.get("Authentication-Results", "")
     }
+<<<<<<< Updated upstream:main.py
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -24,3 +25,12 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     return {"message": "✅ FastAPI is live!"}
+=======
+
+from fastapi import FastAPI
+
+app = FastAPI()
+@app.get("/")
+def read_root():
+    return {"message": "✅ FastAPI backend is working!"}
+>>>>>>> Stashed changes:backend/main.py
