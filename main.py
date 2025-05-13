@@ -17,3 +17,10 @@ def analyze_headers(data: HeaderInput):
         "SPF": headers.get("Received-SPF", ""),
         "DKIM": headers.get("Authentication-Results", "")
     }
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "✅ FastAPI is live!"}
